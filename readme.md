@@ -31,23 +31,28 @@ Claude Engineer is an advanced interactive command-line interface (CLI) that har
 ## 🛠️ Installation
 
 1. Clone this repository:
+
    ```
    git clone https://github.com/doriandarko/claude-engineer.git
    cd claude-engineer
    ```
 
 2. Install the required dependencies:
+
    ```
    pip install -r requirements.txt
    ```
 
 3. Set up your environment variables:
+
    - Create a `.env` file in the project root directory
    - Add the following environment variables:
      ```
      ANTHROPIC_API_KEY=your_anthropic_api_key
      TAVILY_API_KEY=your_tavily_api_key
      ```
+   - To use Amazon Bedrock, replace the ANHTROPIC_API_KEY with `BEDROCK_REGION=aws_region` and
+     ensure you have valid credentials on your environment
 
 4. Set up the virtual environment for code execution:
    Engineer will create a virtual environment to run code the first time it executes a piece of code.
@@ -77,6 +82,7 @@ Once started, you can interact with Claude Engineer by typing your queries or co
 - "Execute this Python code and analyze the results"
 
 Special commands:
+
 - Type 'exit' to end the conversation and close the application.
 - Type 'image' to include an image in your message for analysis.
 - Type 'reset' to reset the entire conversation without restarting the script.
@@ -85,6 +91,7 @@ Special commands:
 - Press Ctrl+C at any time to exit the automode and return to regular chat.
 
 After each interaction, Claude Engineer will display:
+
 - Token usage (input, output, and total) for the current model
 - Remaining context window size
 
@@ -120,6 +127,7 @@ The enhanced automode allows Claude to work autonomously on complex tasks with g
 7. The TOOLCHECKERMODEL validates tool usage and outputs for increased reliability.
 
 To use automode:
+
 1. Type 'automode number' when prompted for input, where number is the maximum number of iterations.
 2. Provide your request when prompted.
 3. Claude will work autonomously, providing updates after each iteration.
